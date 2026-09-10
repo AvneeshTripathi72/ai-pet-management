@@ -1,7 +1,8 @@
 {
-  "name": "tailwindcss4",
+  "name": "pawdentify-frontend",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "author": "Avneesh Kumar Tripathi <https://github.com/AvneeshTripathi72>",
   "type": "module",
   "scripts": {
     "dev": "vite",
