@@ -1,0 +1,1 @@
+export const DOG_PREDICT_API_URL = "https://pawdentify-backend.duckdns.org/predict";

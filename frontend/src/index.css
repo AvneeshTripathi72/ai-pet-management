@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Caveat:wght@400;700&display=swap');
+@import "tailwindcss";
+
+/* Force dark: utilities to use the .dark class on <html>, not OS prefers-color-scheme */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* Core Backgrounds */
+  --color-bg-app: #FFFFFF;
+  --color-bg-secondary: #FAFAFA;
+  --color-card-bg: #FFFFFF;
+  --color-bg-muted: #F8FAFC;
+  --color-bg-footer: #111111;
+  
+  /* Core Text */
+  --color-text-main: #000000;
+  --color-text-body: #333333;
+  --color-text-muted: #666666;
+  
+  /* Accents */
+  --color-accent-blue: #30A7DB;
+  --color-accent-pink: #F07E7E;
+  --color-accent-purple: #7D64A3;
+  --color-accent-yellow: #F9C851;
+  
+  /* Borders & Shadows */
+  --color-border: #EEEEEE;
+  --radius-bento: 40px;
+  --shadow-bento: 0 20px 40px -15px rgba(0, 0, 0, 0.05);
+  --shadow-pill: 0 10px 20px -5px rgba(125, 100, 163, 0.2);
+}
+
+.dark {
+  --color-bg-app: #050505;
+  --color-bg-secondary: #0A0A0A;
+  --color-card-bg: #111111;
+  --color-bg-muted: #0F172A;
+  --color-text-main: #FFFFFF;
+  --color-text-body: #BBBBBB;
+  --color-text-muted: #888888;
+  --color-border: #222222;
+  --shadow-bento: 0 30px 60px -15px rgba(0, 0, 0, 0.6);
+}
+
+/* ===== BASE STYLES ===== */
+body {
+  font-family: 'Sora', system-ui, -apple-system, sans-serif;
+  background-color: var(--color-bg-app);
+  color: var(--color-text-body);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-main);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.font-handwriting {
+  font-family: 'Caveat', cursive;
+}
+
+/* ===== ROOBAROO UTILITIES ===== */
+
+.bento-card {
+  background: var(--color-card-bg);
+  border-radius: var(--radius-bento);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-bento);
+  padding: 2.5rem;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.bento-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.1);
+}
+
+.dark .bento-card:hover {
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.5);
+}
+
+.pill-button {
+  border-radius: 9999px;
+  padding: 0.875rem 2rem;
+  font-weight: 600;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: var(--shadow-pill);
+}
+
+.pill-button:active {
+  transform: scale(0.96);
+}
+
+.bg-purple-accent {
+  background-color: var(--color-accent-purple);
+  color: white;
+}
+
+.bg-purple-accent:hover {
+  background-color: #6a528f;
+}
+
+/* ===== BACKGROUND BLOBS ===== */
+.bg-blob {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: -1;
+  opacity: 0.15;
+}
+
+.blob-purple { background-color: var(--color-accent-purple); }
+.blob-blue { background-color: var(--color-accent-blue); }
+.blob-pink { background-color: var(--color-accent-pink); }
+
+/* ===== ANIMATIONS ===== */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes slideUpFade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  animation: slideUpFade 0.8s ease-out forwards;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

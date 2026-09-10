@@ -1,0 +1,494 @@
+{
+  "hero": {
+    "title": "Man's best friend",
+    "description": {
+      "part1": "Get to know your dog the best you can and give them a home they deserve.",
+      "part2": "Our website lets you identify over 100+ breeds of doggos and gives you up to date information about them."
+    },
+    "predictButton": "Predict",
+    "cards": {
+      "breeds": "breeds",
+      "accuracy": "accuracy",
+      "response": "response"
+    }
+  },
+  "guidelines": {
+    "title": "Prediction Guidelines",
+    "dos": {
+      "title": "Do's",
+      "items": {
+        "clearPhoto": "Clear, front-facing photo",
+        "goodLighting": "Good natural lighting",
+        "singleDog": "Only one dog",
+        "frontView": "Entire dog visible"
+      }
+    },
+    "donts": {
+      "title": "Don'ts",
+      "items": {
+        "blurry": "Blurry, Dark photos",
+        "obstructed": "Dog obscured",
+        "multipleDogs": "Multiple dogs",
+        "distantShots": "Distant/angled shots"
+      }
+    },
+    "note": "Following these guidelines will help our AI provide more accurate breed predictions."
+  },
+  "upload": {
+    "title": "Upload & Predict",
+    "dragDropTitle": "Drag & drop an image",
+    "description": "We recommend a clear, front-facing photo. Images are processed locally before sending to the model.",
+    "ariaLabel": "Upload image file. Press Enter to browse files or drop an image here.",
+    "previewAlt": "Selected preview",
+    "pawIconAlt": "paw icon",
+    "predicting": "Predicting...",
+    "buttons": {
+      "browse": "Browse",
+      "change": "Change",
+      "run": "Run",
+      "cancel": "Cancel"
+    },
+    "hints": {
+      "recommended": "Recommended: 800×800+",
+      "fileTypes": "File types: JPG, PNG"
+    },
+    "progress": "Uploading… {{percent}}%",
+    "messages": {
+      "imageSelected": "Image selected. Ready to upload.",
+      "uploading": "Uploading image and requesting prediction...",
+      "predictionFailed": "Prediction failed.",
+      "predictionSuccess": "Prediction succeeded: {{breed}}"
+    },
+    "errors": {
+      "selectImageFirst": "Please select an image first",
+      "invalidFileType": "Please upload a valid image file",
+      "lowConfidence": "Low confidence prediction. Please try another image.",
+      "connectError": "Failed to connect to server",
+      "serverError": "Prediction failed due to server error."
+    }
+  },
+  "header": {
+    "nav": {
+      "home": "Home",
+      "info": "Info",
+      "services": "Services",
+      "browseBreeds": "Browse"
+    },
+    "faq": "FAQ",
+    "services": "Services",
+    "dashboard": "Dashboard",
+    "settings": "Settings",
+    "signOut": "Sign Out",
+    "signUp": "Sign Up",
+    "signIn": "Sign In",
+    "back": "Back",
+    "getStarted": "Get Started",
+    "logoAlt": "Pawdentify Logo",
+    "lightMode": "Switch to Light Mode",
+    "darkMode": "Switch to Dark Mode",
+    "admin": {
+      "feedback": "Feedback"
+    }
+  },
+  "breeds": {
+  "search": {
+    "placeholder": "Search for a breed...",
+    "filters": {
+      "title": "Filter Breeds",
+      "clear": "Clear Filters",
+      "size": {
+        "label": "Size",
+        "all": "All Sizes",
+        "small": "Small",
+        "medium": "Medium",
+        "large": "Large",
+        "giant": "Giant"
+      },
+      "energy": {
+        "label": "Energy Level",
+        "all": "All Levels",
+        "low": "Low",
+        "medium": "Medium",
+        "high": "High"
+      },
+      "grooming": {
+        "label": "Grooming Needs",
+        "all": "All Levels",
+        "low": "Low",
+        "medium": "Medium",
+        "high": "High"
+      },
+      "children": {
+        "label": "Good with Children",
+        "all": "All",
+        "yes": "Yes",
+        "no": "No"
+      },
+      "shedding": {
+        "label": "Shedding Level",
+        "all": "All Levels",
+        "low": "Low",
+        "medium": "Medium",
+        "high": "High"
+      }
+    },
+    "results": {
+      "showing": "Showing",
+      "of": "of",
+      "breeds": "breeds",
+      "noResults": "No breeds found matching your criteria"
+    }
+  }
+}
+,
+"searchBreed": {
+    "title": "Explore Dog Breeds",
+    "subtitle": "Search from 100+ breeds in our database",
+    "searchPlaceholder": "Type breed name (e.g., 'germen sheperd')...",
+    "searchResults": "Search Results",
+    "noResults": "No breeds found. Try different spelling!",
+    "topSearched": "Top Searched Breeds",
+    "featured": "Featured Breeds",
+    "card": {
+      "size": "Size",
+      "weight": "Weight",
+      "height": "Height"
+    }
+  },
+  "services": {
+    "title": "Find Pet Services Near You",
+    "subtitle": "Discover veterinary clinics, pet stores, shelters, and more in your area",
+    "signInRequired": "Please sign in to access Services",
+    "categories": {
+      "vet": "Veterinary Clinics",
+      "pet_store": "Pet Stores",
+      "food_store": "Pet Food Stores",
+      "shelter": "Pet Adoption Near Me",
+      "ngo": "Animal Welfare NGOs"
+    },
+    "searchRadius": "Search Radius",
+    "radiusOptions": {
+      "2km": "2 km",
+      "5km": "5 km",
+      "10km": "10 km",
+      "20km": "20 km"
+    },
+    "enableLocation": "Enable location to find services near you",
+    "locationError": "Unable to access your location. Please enable location services.",
+    "withPhone": "Places with Contact Number",
+    "withoutPhone": "Places without Contact Number",
+    "noResults": "No places found in this category",
+    "distance": "{{distance}} km away",
+    "getDirections": "Get Directions",
+    "call": "Call",
+    "email": "Email",
+    "website": "Website",
+    "loading": "Loading nearby places...",
+    "selectCategory": "Select a category to see nearby places",
+    "showingResults": "Showing {{count}} places within {{radius}} km"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": {
+      "whatIs": {
+        "question": "What is AI Breed Classifier?",
+        "answer": "It is a AI-powered dog breed identification app that helps you identify your dog's breed by uploading a photo."
+      },
+      "accuracy": {
+        "question": "How accurate is the breed prediction?",
+        "answer": "Our AI model provides high accuracy predictions, but results may vary based on image quality and clarity. For best results, upload clear, well-lit photos of your dog's face."
+      },
+      "multiplePhotos": {
+        "question": "Can I upload multiple photos?",
+        "answer": "Currently, you can upload one photo at a time for prediction. We're working on batch processing features for future updates."
+      },
+      "formats": {
+        "question": "What image formats are supported?",
+        "answer": "We support common image formats including JPG, PNG, and JPEG. Make sure your image is under 10MB in size."
+      },
+      "security": {
+        "question": "Is my data secure?",
+        "answer": "Yes, we take privacy seriously. Uploaded images are processed securely and not stored permanently on our servers."
+      }
+    },
+    "stillNeedHelp": "Still need help?",
+    "contactUs": "Contact Us"
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Customize your Pawdentify experience",
+    "backToHome": "Back to Home",
+    "saving": "Saving",
+    "functionality": {
+      "title": "Functionality",
+      "imageQuality": {
+        "label": "Image Quality",
+        "description": "Higher quality provides better predictions but uses more data. Lower quality is faster and uses less bandwidth.",
+        "high": "High Quality",
+        "medium": "Medium Quality",
+        "low": "Low Quality (Faster)"
+      },
+      "language": {
+        "label": "Language",
+        "description": "Select your preferred language"
+      }
+    },
+    "privacy": {
+      "title": "Privacy & Data",
+      "saveHistory": {
+        "label": "Save Search History",
+        "description": "Automatically save your dog breed predictions to view later. When disabled, your searches remain completely private.",
+        "warning": "Anonymous mode: Your predictions will not be saved"
+      },
+      "clearData": {
+        "title": "Clear All Data",
+        "description": "Remove all stored Pawdentify data from this device and cloud",
+        "button": "Clear All Data",
+        "confirm": "Clear all Pawdentify data? This cannot be undone.",
+        "confirmCloudData": "Do you also want to clear your cloud data (pets and history)?",
+        "success": "All Pawdentify data removed.",
+        "error": "Failed to clear data — see console.",
+        "cloudError": "Failed to clear cloud data. Please try again."
+      }
+    },
+    "advanced": {
+      "title": "Advanced",
+      "cache": {
+        "title": "Cache Management",
+        "description": "Clear cached data to free space",
+        "button": "Clear Cache",
+        "confirm": "Clear cached data?",
+        "success": "Cache cleared successfully."
+      }
+    },
+    "about": {
+      "title": "About",
+      "version": "Version:",
+      "versionNumber": "1.0.0",
+      "lastUpdated": "Last Updated:",
+      "lastUpdatedDate": "January 2025",
+      "breedsDatabase": "Breeds:",
+      "breedsDatabaseCount": "120",
+      "support": "Support:",
+      "supportEmail": "support@aibreedclassifier.com"
+    }
+  },
+  "auth": {
+    "signUp": {
+      "title": "Create Account",
+      "subtitle": "Join AI Breed Classifier today",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "emailPlaceholder": "you@example.com",
+      "password": "Password",
+      "passwordPlaceholder": "••••••••",
+      "submitButton": "Create Account",
+      "alreadyHaveAccount": "Already have an account?",
+      "signInLink": "Sign in",
+      "verifyTitle": "Verify Email",
+      "verifySubtitle": "Enter the code sent to",
+      "verificationCode": "Verification Code",
+      "verificationPlaceholder": "000000",
+      "verifyButton": "Verify & Continue",
+      "googleButton": "Continue with Google",
+      "divider": "or"
+    },
+    "signIn": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to your account",
+      "email": "Email Address",
+      "emailPlaceholder": "you@example.com",
+      "password": "Password",
+      "passwordPlaceholder": "••••••••",
+      "forgotPassword": "Forgot password?",
+      "submitButton": "Sign In",
+      "noAccount": "Don't have an account?",
+      "signUpLink": "Sign up",
+      "resetTitle": "Reset Password",
+      "resetSubtitle": "Enter your email to receive a reset code",
+      "resetButton": "Send Reset Code",
+      "backToSignIn": "Back to Sign In",
+      "newPassword": "New Password",
+      "confirmPassword": "Confirm Password",
+      "resetPasswordButton": "Reset Password",
+      "googleButton": "Continue with Google",
+      "divider": "or"
+    },
+    "errors": {
+      "generic": "Something went wrong",
+      "invalidCode": "Invalid verification code",
+      "passwordMismatch": "Passwords don't match"
+    }
+  },
+  "dashboard": {
+  "profile": {
+    "joined": "Joined",
+    "location": "Location",
+    "pets": "Pets",
+    "pet": "Pet",
+    "searches": "Searches"
+  },
+  "tabs": {
+    "pets": "My Pets",
+    "history": "Search History"
+  },
+  "pets": {
+    "title": "My Pets",
+    "noPets": "You haven't added any pets yet",
+    "noPetsDesc": "Start building your pet collection today",
+    "addPet": "Add Your Pet",
+    "addFirstPet": "Add Your First Pet",
+    "viewDetails": "View Details",
+    "delete": "Delete",
+    "confirmDelete": "Are you sure you want to delete",
+    "birthday": "Birthday",
+    "age": "Age",
+    "yearsOld": "years old",
+    "monthsOld": "months old",
+    "petBreed": "Breed",
+    "addedOn": "Added on",
+    "addPetModal": {
+      "saving": "Saving...",
+      "title": "Add Your Pet",
+      "petName": "Pet Name",
+      "petNamePlaceholder": "e.g., Max, Luna, Buddy",
+      "petBreed": "Breed",
+      "petBreedPlaceholder": "e.g., Golden Retriever, Beagle",
+      "petBirthday": "Birthday (Optional)",
+      "petImage": "Pet Photo",
+      "uploadImage": "Upload Photo",
+      "changeImage": "Change Photo",
+      "cancel": "Cancel",
+      "save": "Save Pet",
+      "imageRequired": "Please upload a photo of your pet"
+    },
+    "petDetails": {
+      "title": "Pet Details",
+      "journal": "Pet Journal",
+      "addNote": "Add Note",
+      "noNotes": "No journal entries yet. Start documenting your pet's journey!",
+      "notePlaceholder": "Write about your pet...",
+      "noteCategory": "Category",
+      "saveNote": "Save Note",
+      "deleteNote": "Delete",
+      "close": "Close",
+      "filterByCategory": "Filter by category",
+      "allCategories": "All Categories",
+      "categories": {
+        "health": "Health",
+        "vaccination": "Vaccination",
+        "treats": "Treats & Rewards",
+        "dailyLife": "Daily Life",
+        "milestone": "Milestone",
+        "other": "Other"
+      }
+    },
+    "adoptTitle": "Looking to Adopt?",
+    "adoptDesc": "Millions of pets are waiting for their forever home. Discover the joy of adoption and learn why it's one of the most rewarding decisions you can make.",
+    "adoptCTA": "Find Pets to Adopt",
+    "adoption": {
+      "title": "Consider Adopting a Pet",
+      "description": "Thousands of pets are waiting for loving homes. Adoption saves lives!",
+      "findPets": "Find Adoptable Pets Near You"
+    }
+  },
+  "history": {
+    "title": "Prediction History",
+    "noHistory": "No search history yet",
+    "noHistoryDesc": "Start identifying dog breeds to build your history",
+    "startSearch": "Start Identifying Breeds",
+    "confidence": "Confidence",
+    "searchedOn": "Searched on",
+    "remove": "Remove"
+  },
+  "loading": "Loading..."
+},
+  "breedInfo": {
+    "noInfoFound": "No detailed info found for the predicted breed.",
+    "unknownBreed": "Unknown",
+    "knowMore": "Know More",
+    "backToTop": "Back to Top",
+    "noFunFact": "No fun fact available.",
+    "tabs": {
+      "physical": "Physical",
+      "temperament": "Temperament",
+      "care": "Care",
+      "environment": "Environment",
+      "health": "Health",
+      "nutrition": "Nutrition",
+      "trainExercise": "Train & Exercise",
+      "lifestyle": "Lifestyle"
+    }
+  },
+  "knowMore": {
+    "title": "Know More:",
+    "noData": "No data available. Please go back and select a breed.",
+    "back": "Back",
+    "readMore": "Read more",
+    "readLess": "Read less",
+    "noDetails": "No details available.",
+    "defaultBreed": "Breed"
+  },
+  "footer": {
+    "logo": "AI Breed Classifier",
+    "copyright": "AI Breed Classifier. All rights reserved.",
+    "navigation": {
+      "title": "Navigation",
+      "home": "Home",
+      "predict": "Predict"
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "support@aibreedclassifier.com",
+      "phone": "+1 (555) 123-4567"
+    }
+  },
+  "common": {
+    "loading": "Loading",
+    "tryAgain": "Try Again",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "back": "Back"
+  },
+  "feedback": {
+    "helpfulQuestion": "Was this helpful?",
+    "title": "Feedback",
+    "upvote": "Correct",
+    "downvote": "Incorrect",
+    "youSelected": "You selected:",
+    "additionalFeedback": "Tell us more (optional)",
+    "placeholder": "What could we improve?",
+    "submitButton": "Submit Feedback",
+    "submitting": "Submitting...",
+    "cancel": "Cancel",
+    "selectVoteError": "Please select upvote or downvote",
+    "submitError": "Failed to submit feedback",
+    "networkError": "Network error. Please try again.",
+    "thankYou": "Thank you for your feedback!"
+  },
+  "admin": {
+    "feedback": {
+      "title": "Admin Feedback Dashboard",
+      "accessDenied": "Access Denied",
+      "noPermission": "You do not have permission to view this page.",
+      "errorTitle": "Error",
+      "fetchError": "Failed to fetch feedbacks",
+      "networkError": "Network error",
+      "noFeedbacks": "No feedbacks available.",
+      "table": {
+        "userId": "User ID",
+        "predictedBreed": "Predicted Breed",
+        "voteType": "Vote Type",
+        "message": "Feedback Message",
+        "timestamp": "Timestamp",
+        "noMessage": "N/A"
+      }
+    }
+  }
+}
