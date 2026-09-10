@@ -23,10 +23,19 @@ BREED_INFO_PATH = BASE_DIR.joinpath("breed_info_final.json")
 
 app = FastAPI(title="Dog Breed Classifier API")
 
-# Allow CORS from dev frontend (adjust origin as needed)
+# Allow CORS from dev & production frontends
+env_origins = os.getenv("ALLOWED_ORIGINS", "").split(",")
+default_origins = [
+    "http://localhost:5173",
+    "http://localhost:3000",
+    "https://pawdentify-frontend.vercel.app"
+]
+origins = list(set([o.strip() for o in default_origins + env_origins if o.strip()]))
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:3000"],  # add your frontend origin(s)
+    allow_origins=origins,
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

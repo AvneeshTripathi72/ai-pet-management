@@ -91,6 +91,36 @@ const Services = () => {
     if (selectedCategory && userLocation && mapInstanceRef.current) fetchPlaces();
   }, [selectedCategory, userLocation]);
 
+  useEffect(() => {
+    if (mapInstanceRef.current && window.mappls && places.length > 0) {
+      markersRef.current.forEach((m) => {
+        if (m && typeof m.remove === 'function') m.remove();
+      });
+      markersRef.current = [];
+
+      places.forEach((place) => {
+        if (place.latitude && place.longitude) {
+          try {
+            const marker = new window.mappls.Marker({
+              map: mapInstanceRef.current,
+              position: { lat: place.latitude, lng: place.longitude },
+              popupHtml: `<div style="padding:4px"><b>${place.name}</b><br/>${place.address}</div>`
+            });
+            markersRef.current.push(marker);
+          } catch (e) {
+            console.error('Error placing marker:', e);
+          }
+        }
+      });
+
+      if (places[0]?.latitude && places[0]?.longitude) {
+        try {
+          mapInstanceRef.current.setCenter([places[0].latitude, places[0].longitude]);
+        } catch (e) {}
+      }
+    }
+  }, [places]);
+
   return (
     <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#050505] pt-32 pb-24 px-6 relative overflow-hidden transition-colors duration-300">
       <div className="bg-blob blob-blue top-0 right-0 opacity-5"></div>

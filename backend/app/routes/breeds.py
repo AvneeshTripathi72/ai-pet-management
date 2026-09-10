@@ -2,7 +2,8 @@ from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 from datetime import datetime
 
-from ..auth import get_current_user
+from typing import Optional
+from ..auth import get_current_user, get_optional_current_user
 from ..database import breed_searches_collection
 
 router = APIRouter(prefix="/api", tags=["breeds"])
@@ -15,7 +16,7 @@ class BreedSearchTrack(BaseModel):
 @router.post("/breeds/track")
 async def track_breed_search(
     data: BreedSearchTrack,
-    current_user: dict = Depends(get_current_user)
+    current_user: Optional[dict] = Depends(get_optional_current_user)
 ):
     """
     Track when a user searches for a specific breed.

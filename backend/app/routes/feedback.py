@@ -3,7 +3,8 @@ from pydantic import BaseModel
 from datetime import datetime
 import uuid
 
-from ..auth import get_current_user
+from typing import Optional
+from ..auth import get_current_user, get_optional_current_user
 from ..database import feedback_collection
 
 router = APIRouter(prefix="/api", tags=["feedback"])
@@ -25,9 +26,9 @@ class FeedbackResponse(BaseModel):
 @router.post("/feedback")
 async def submit_feedback(
     feedback_data: FeedbackCreate,
-    current_user: dict = Depends(get_current_user)
+    current_user: Optional[dict] = Depends(get_optional_current_user)
 ):
-    user_id = current_user["user_id"]
+    user_id = current_user["user_id"] if current_user else "guest"
     feedback_id = str(uuid.uuid4())
     feedback_doc = {
         "_id": feedback_id,

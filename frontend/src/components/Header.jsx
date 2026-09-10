@@ -131,7 +131,6 @@ const Header = ({ showInfo }) => {
                   </Link>
                 ))}
                  <SignedIn>
-                    <Link to="/settings" className="text-3xl font-black text-black dark:text-white tracking-tighter" onClick={() => setMobileMenuOpen(false)}>Settings</Link>
                     <Link to="/dashboard" className="text-3xl font-black text-[#30A7DB] tracking-tighter" onClick={() => setMobileMenuOpen(false)}>Dashboard</Link>
                  </SignedIn>
              </div>

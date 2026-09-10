@@ -111,3 +111,20 @@ async def get_current_user(
         "payload": payload
     }
 
+async def get_optional_current_user(
+    credentials: Optional[HTTPAuthorizationCredentials] = Security(HTTPBearer(auto_error=False))
+) -> Optional[dict]:
+    """Extract user if token is provided, otherwise return None safely"""
+    if not credentials or not credentials.credentials:
+        return None
+    try:
+        token = credentials.credentials
+        payload = verify_token(token)
+        user_id = payload.get("sub")
+        if not user_id:
+            return None
+        return {"user_id": user_id, "payload": payload}
+    except Exception:
+        return None
+
+
